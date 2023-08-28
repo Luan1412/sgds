@@ -1,27 +1,38 @@
-# Sgds
+# Software de Gestão de Saúde usando Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+Bem-vindo ao repositório do **Software de Gestão de Saúde** desenvolvido como parte do projeto de Trabalho de Conclusão de Curso (TCC) pela equipe composta por Luan Santana de Oliveira, Marcelo Iacovina Jr, Pedro Henrike Gusmão, Tainá Soares e Vitor Hugo. Neste repositório, você encontrará todas as informações, código e recursos relacionados ao nosso projeto de software de gestão de saúde construído com HTML, CSS, JavaScript e a framework Angular.
 
-## Development server
+## Descrição do Projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+O **Software de Gestão de Saúde** é uma aplicação desenvolvida para facilitar a administração e monitoramento de informações relacionadas à saúde. Nosso objetivo é criar uma solução eficaz que possibilite o acompanhamento de pacientes, agendamento de consultas, gerenciamento de históricos médicos e mais, tudo em um ambiente intuitivo e de fácil utilização.
 
-## Code scaffolding
+## Tecnologias Utilizadas
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Neste projeto, utilizamos as seguintes tecnologias:
 
-## Build
+- **Angular**: Uma poderosa framework para desenvolvimento de aplicações web, permitindo a criação de interfaces responsivas e dinâmicas.
+- **HTML**: Linguagem de marcação para estruturar os elementos da aplicação.
+- **CSS**: Linguagem de estilo para definir o layout e a aparência dos elementos.
+- **JavaScript**: Linguagem de programação para adicionar interatividade e comportamento à aplicação.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Funcionalidades Principais
 
-## Running unit tests
+1. **Gerenciamento de Pacientes**: Cadastro detalhado de informações dos pacientes, incluindo dados pessoais, histórico médico e prescrições.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. **Agendamento de Consultas**: Sistema de agendamento de consultas para pacientes, com interface de calendário e notificações.
 
-## Running end-to-end tests
+3. **Histórico Médico**: Armazenamento e acesso rápido ao histórico médico dos pacientes, permitindo um diagnóstico mais preciso.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. **Prescrições e Medicamentos**: Possibilidade de prescrever medicamentos e tratamentos, com registro das doses e duração.
 
-## Further help
+5. **Dashboard Administrativo**: Um painel de controle para os profissionais de saúde acompanharem as atividades e estatísticas relevantes.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Equipe
+
+- Luan Santana de Oliveira
+- Marcelo Iacovina Jr
+- Pedro Henrike Gusmão
+- Tainá Soares
+- Vitor Hugo
+##
+  **Agradecemos por se interessar pelo nosso projeto de software de gestão de saúde desenvolvido com Angular, HTML, CSS e JavaScript. Fique à vontade para explorar o código e fazer parte dessa jornada em prol da saúde e tecnologia!**
