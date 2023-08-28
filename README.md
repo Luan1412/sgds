@@ -1,6 +1,6 @@
-# Software de Gestão de Saúde usando Angular
+# Software de Gestão de Saúde (SGDS)
 
-Bem-vindo ao repositório do **Software de Gestão de Saúde** desenvolvido como parte do projeto de Trabalho de Conclusão de Curso (TCC) pela equipe composta por Luan Santana de Oliveira, Marcelo Iacovina Jr, Pedro Henrike Gusmão, Tainá Soares e Vitor Hugo. Neste repositório, você encontrará todas as informações, código e recursos relacionados ao nosso projeto de software de gestão de saúde construído com HTML, CSS, JavaScript e a framework Angular.
+Bem-vindo ao repositório do **Software de Gestão de Saúde** desenvolvido como parte do projeto de Trabalho de Conclusão de Curso (TCC) pela equipe composta por Luan Santana de Oliveira, Marcelo Iacovina Jr, Pedro Henrike Gusmão, Tainá Soares Carvalho e Vitor Hugo Texeira. Neste repositório, você encontrará todas as informações, código e recursos relacionados ao nosso projeto de software de gestão de saúde construído com HTML, CSS, JavaScript e a framework Angular.
 
 ## Descrição do Projeto
 
@@ -32,7 +32,7 @@ Neste projeto, utilizamos as seguintes tecnologias:
 - Luan Santana de Oliveira
 - Marcelo Iacovina Jr
 - Pedro Henrike Gusmão
-- Tainá Soares
-- Vitor Hugo
+- Tainá Soares Carvalho
+- Vitor Hugo Texeira
 ##
   **Agradecemos por se interessar pelo nosso projeto de software de gestão de saúde desenvolvido com Angular, HTML, CSS e JavaScript. Fique à vontade para explorar o código e fazer parte dessa jornada em prol da saúde e tecnologia!**
