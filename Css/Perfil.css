@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Red Hat Display', sans-serif;
+}
+header{
+    background-color:#053956;
+    background-position: center;
+    height: 90px;
+    padding-top: 15px;
+    padding-left: 20px;
+    
+}
+header img{
+    margin-left: 20px;
+    height: 60px;
+    width: 210px;
+    /* margin-bottom: 50px; */
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 8%;
+}
+.navbar img{
+    margin-left: -100px;
+    height: 60px;
+    width: 210px;
+}
+.navbar-list{
+    width: 100%;
+    text-align: right;
+    padding-right: 1rem;
+}
+.navbar-list li{
+    display: inline-block;
+}
+.navbar-list li a{
+    text-decoration: none;
+    color: white; text-shadow: black 0.1em 0.1em 0.2em;
+    font-size: 14px;
+}
+
+ /* Dropmenu */
+.profile-dropdown{
+    position: relative;
+    width: fit-content;
+}
+.profile-dropdown-list{
+    display: inline;
+    position: absolute;
+    top: 68px;
+    width: 220px;
+    right: 0;
+    background-color:#053956;;
+    border-radius: 10px;
+    box-shadow:0px 2px 8px 0px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+}
+.profile-dropdown-list.active{
+    max-height: 500px;
+}
+.profile-dropdown-list-item{
+    padding: .5rem 0 .5rem 1rem;
+    transition: background-color 0.2s padding-left 0.2;
+}
+.profile-dropdown-list-item:hover{
+    padding-left: 1.5rem;
+    background-color: rgb(34, 124,112,0.2);
+}
+.profile-dropdown-list-item a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: white;
+}
+.profile-dropdown-list-item a i{
+    margin-right: 1rem;
+    font-size: 1.1rem;
+    width: 2.3rem;
+    height: 2.3rem;
+    background-color:#048484;
+    color: #FFF;
+    line-height:2.3rem;
+    text-align: center;
+    border-radius: 50%;
+}
+.profile-img{
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-size: cover; 
+}
+.profile-img img{
+    position: absolute;
+    left: 100px;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-size: cover; 
+}
+
+.profile-dropdown-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #FFF;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 150px;
+    transition:box-shadow 0.2s,background-color 0.2s;
+}
+
+.profile-dropdown-btn:hover{
+    background-color:#048484;
+    box-shadow:0px 2px 8px 0px;
+}
+.profile-dropdown-btn span{
+    margin:0 0.5rem;
+    margin-right: 0;
+    color: #FFF;
+}
+.profile-dropdown-list hr{
+    border: 0.5px solid white;
+}
+.btn{
+    background-color: transparent;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    height: 20px;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    transition: 0.8s;
+    border:2px solid #048484;
+}
+.btn:hover,.btn:focus{
+    transform: translatey(-5px) ;
+    background-color: #048484;
+}
+.btn-user{
+    background-color: transparent;
+    color: #ffff;
+    padding: 15px 10px;
+    border-radius: 40px;
+    height: 20px;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    transition: 0.8s; 
+}
+.btn-user:hover,.btn-user:focus{
+    transform: translatey(-5px) ;
+    background-color: #FFF;
+    color: black;
+}
+
+
+.corpo{
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.corpo h1{
+
+    }
+  
+
+.bot {
+    height: 50px;
+    width: 200px;
+    background-color: #053956;
+    border-radius: 1px;
+    color: #fff;;;
+    
+}
+.bot:hover {
+    background-color: #048484;
+    transition: 0.5s;
+}
+.ativar{
+    background-color:#048484;;
+}
+.blk1 {
+    text-align: center;
+    margin-top: 20px;
+    width: 50%;
+    height: 400px;
+    border: 2px dashed orangered;
+    background-color: lightgreen;
+}
+.blk2 {
+    text-align: center;
+    margin-top: 20px;
+    width: 50%;
+    height: 400px;
+    border: 2px dashed orangered;
+    background-color: rgb(233, 144, 238);
+}
+.blk3 {
+    text-align: center;
+    margin-top: 20px;
+    width: 50%;
+    height: 400px;
+    border: 2px dashed rgb(0, 255, 0);
+    background-color: rgb(0, 195, 255);
+}
+.blk4{
+    text-align: center;
+    margin-top: 20px;
+    width: 50%;
+    height: 400px;
+    border: 2px dashed rgba(255, 0, 0, 0.603);
+    background-color: rgb(255, 159, 188);
+}
+.hideblk{
+    gap: 150px;
+    display: none;
+    justify-content: center;
+}
