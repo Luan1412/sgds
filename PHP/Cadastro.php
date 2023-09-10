@@ -15,7 +15,7 @@ if (isset($_POST['submit']))
     $cpf = $_POST['cpf'];
     $senha = $_POST['senha'];
 
-    $result = mysqli_query($conexao, "INSERT INTO pacientes=(nome,email,cpf,senha) values('$nome','$email','$cpf','$senha')");
+    $result = mysqli_query($conexao, "INSERT INTO usuario(nome,email,cpf,senha) values('$nome','$email','$cpf','$senha')");
 }
 ?>
 
@@ -28,26 +28,27 @@ if (isset($_POST['submit']))
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,700;1,900&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="../login/Css2/cadastronovo.css">  
+    <link rel="stylesheet" href="../Css/cadastro.css">  
 
     <title>Login SGDS</title>
 </head>
 <header id="imagemLogo">
-   <a href="#"><img id="imagemLogo" src="../login/img/LogoSGDS.png" alt="LogoSGDS"  ></a>
+   <a href="#"><img id="imagemLogo" src="../img/Logo.png" alt="LogoSGDS"  ></a>
 </header>
 <body>
     <main>
         <div class="login-container" id="login-container">
             <div class="form-contariner">
-                <form class="form form-login">
+                <form class="form form-login" action="testLogin.php" method="POST">
                     <h2 class="form-title">Login</h2>
                     <div class="form-input-container">
-                        <input type="email" class="form-input" placeholder="Email">
-                        <input type="password" class="form-input" placeholder="Senha">
+                        <input type="email" class="form-input" name="email"placeholder="Email">
+                        <input type="password" class="form-input" name="senha" placeholder="Senha">
+                        <input type="submit"name="submit"value="enviar"class="form-button">
+
 
                     </div>
                     <a href="#" class="form-link">Esqueceu a senha?</a>
-                    <button type="button" class="form-button">Entrar</button>
                     <p class="mobile-text">Não tem conta? 
                         <a href="#" id="open-register-mobile">Registre-se</a>
                     </p>
@@ -56,15 +57,15 @@ if (isset($_POST['submit']))
                 <form id class="form form-cadastro" action="cadastro.php" method="POST">
                     <h2 class="form-title">Criar conta</h2>
 
-                    <input type="text" class="form-input" name="nome" placeholder="Nome Completo" maxlength="100" minlength="2" >
-                    <input type="text" class="form-input " name="cpf" placeholder="CPF (sem traços ou pontos)"  maxlength="11" minlength="2">
+                    <input type="text" class="form-input" name="nome"id="nome" placeholder="Nome Completo" maxlength="100" minlength="2" >
+                    <input type="text" class="form-input " name="cpf" id="cpf"placeholder="CPF (sem traços ou pontos)"  maxlength="11" minlength="2">
                     <!-- <input type="email" class="form-input" placeholder="RG (sem traços ou pontos)"> -->
-                    <input type="email" class="form-input " name="email" placeholder="Email" >
+                    <input type="email" class="form-input "id="email" name="email" placeholder="Email" >
                     <!-- <input type="date" class="form-input" >
                     <input type="number" class="form-input" placeholder="Numero de Telefone"> -->
-                    <input type="password" class="form-input " name="senha" placeholder="Senha" >
+                    <input type="password" class="form-input "id="senha" name="senha" placeholder="Senha" >
                     <!-- <input type="password" class="form-input " placeholder="Repita sua Senha" > -->
-                    <button type="submit" name="submit" class="form-button">Cadastrar</button>
+                    <button type="submit" id="submit"name="submit" class="form-button">Cadastrar</button>
                     <p class="mobile-text">já tem conta? 
                         <a href="#" id="open-login-mobile">Login</a>
                     </p>
@@ -87,6 +88,6 @@ if (isset($_POST['submit']))
         </div>
     </main>
 </body>
-<script src="../login/js/login.js"></script>
+<script src="../js/login.js"></script>
 
 </html>
