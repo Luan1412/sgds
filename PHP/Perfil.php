@@ -17,7 +17,6 @@ if ($resultadoNome && $resultadoNome->num_rows > 0) {
     $dadosUsuario = $resultadoNome->fetch_assoc();
     $NOME = $dadosUsuario['nome'];
 } else {
-    // Se não encontrou o nome do usuário, você pode definir um valor padrão
     $NOME = "User";
 }
    
@@ -32,13 +31,13 @@ $con = $conexao->query($consulta) or die ($conexao->error);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Css/profile.css">
+    <link rel="stylesheet" href="../Css/perfil.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <header>
     <div class="container">
         <nav class="navbar">
-            <a href="indexSGDS.html">
+            <a href="../root/indexSGDS.html">
                 <img src="../img/logo.png" alt="SGDS"class="navbar-logo">
             </a>
             <div class="profile-dropdown">
@@ -92,18 +91,38 @@ $con = $conexao->query($consulta) or die ($conexao->error);
 <body>
         <div class="corpo">
             <h1>
-                <button class="bot bot1">Exames</button>
-                <button class="bot btn2">Historico medico</button>
-                <button class="bot btn3">Vacinas</button>
+                <button class="bot bot1" onclick="toggleDetails('prontuarioDetails')">Prontuário</button>
+                <button class="bot btn2" onclick="toggleDetails('historicoMedicoDetails')">Histórico médico</button>
                 <button class="bot btn4">Consultas agendadas</button>
             </h1>
-            <div class="blk1 hideblk">
+            <div class="blk1 hideblk">  
                 <table class="tabela">
                     <tr>
-                        <td>Nome</td>
+
                         <td>Data da consulta</td>
-                        <td>Exames</td>
+                        <td>Profissional</td>
+                        <td>Exame</td>
                         <td>Data do reagendamento</td>
+                        <td>Observação</td>
+                    </tr>
+                    <?php while($dado= $con->fetch_array()){ ?>
+                    <tr>
+                        <td><?php echo date ("d/m/Y", strtotime( $dado["dataConsulta"]));?></td>
+                        <td><?php echo $dado["nome"];?></td>
+                        
+                        <td><?php echo $dado["exames"];?></td>
+                        <td><?php echo date ("d/m/Y", strtotime($dado["dataReagendar"]));?></td>
+                        <td><?php echo $dado["observacao"];?></td>
+                    </tr>
+                    <?php } ?>
+                </table>
+            </div>
+            <div class="blk2 hideblk">
+            <table class="tabela">
+                    <tr>
+                        <td>Profissional</td>
+                        <td>Data da consulta</td>
+
                         <td>Observação</td>
                     </tr>
                     <?php while($dado= $con->fetch_array()){ ?>
@@ -117,18 +136,24 @@ $con = $conexao->query($consulta) or die ($conexao->error);
                     <?php } ?>
                 </table>
             </div>
-            <div class="blk2 hideblk">
-                <h3>Bloco 2</h3>
-                <p>Conteúdo do Bloco 2</p>
-            </div>
 
-            <div class="blk3 hideblk">
-                <h3>Bloco 3</h3>
-                <p>Conteúdo do Bloco 3</p>
-            </div>
             <div class="blk4 hideblk">
-                <h3>Bloco 4</h3>
-                <p>Conteúdo do Bloco 4</p>
+            <table class="tabela">
+                    <tr>
+                        <td>Profissional</td>
+                        <td>Data do reagendamento</td>
+                        <td>Observação</td>
+                        <td>Editar</td>
+                    </tr>
+                    <?php while($dado= $con->fetch_array()){ ?>
+                    <tr>
+                        <td><?php echo $dado["nome"];?></td>
+                        <td><?php echo $dado["exames"];?></td>
+                        <td><?php echo date ("d/m/Y", strtotime($dado["dataReagendar"]));?></td>
+                        <td><?php echo $dado["observacao"];?></td>
+                    </tr>
+                    <?php } ?>
+                </table>
             </div>
         </div>
      </div>

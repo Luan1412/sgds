@@ -114,7 +114,7 @@ header img{
     font-weight: 800;
     color:#053956;
     cursor: pointer;
-
+    
 }
 
 .form-button:hover{
@@ -132,6 +132,7 @@ header img{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    
 }
 
 .mobile-text{

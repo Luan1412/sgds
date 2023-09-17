@@ -33,7 +33,7 @@ if (isset($_POST['submit']))
     <title>Login SGDS</title>
 </head>
 <header id="imagemLogo">
-   <a href="#"><img id="imagemLogo" src="../img/Logo.png" alt="LogoSGDS"  ></a>
+   <a href="../root/indexSGDS.html"><img id="imagemLogo" src="../img/Logo.png" alt="LogoSGDS"  ></a>
 </header>
 <body>
     <main>

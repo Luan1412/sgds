@@ -1,0 +1,25 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+ul#waitlist {
+    list-style: none;
+    padding: 0;
+}
+
+ul#waitlist li {
+    background-color: #f0f0f0;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+ul#waitlist li:hover {
+    background-color: #ddd;
+}

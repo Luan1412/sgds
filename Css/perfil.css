@@ -209,7 +209,7 @@ nav{
     width: 50%;
     height: 400px;
     border: 2px dashed orangered;
-    background-color: red;
+    background-color: transparent;
 }
 .blk3 {
     text-align: center;
@@ -225,7 +225,7 @@ nav{
     width: 50%;
     height: 400px;
     border: 2px dashed rgba(255, 0, 0, 0.603);
-    background-color: rgb(255, 159, 188);
+    background-color:transparent;
 }
 .hideblk{
     gap: 150px;
