@@ -1,25 +1,58 @@
 <?php
-
-if (isset($_POST['submit']))
-{
-//     print_r ($_POST['nome']);
-//     print_r ($_POST['email']);
-//     print_r ($_POST['cpf']);
-//     print_r ($_POST['senha']);
-// }
-
+if (isset($_POST['submit'])) {
     include_once('config.php');
-
+    
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $cpf = $_POST['cpf'];
     $senha = $_POST['senha'];
+    $rep_senha = $_POST['rep_senha'];
+    
+    if ($senha != $rep_senha) {
+        //echo "As senhas não coincidem. Por favor, tente novamente.";
+    } else {
+        $senhaCriptografada = password_hash($senha, PASSWORD_DEFAULT);
+        
+        $result = mysqli_query($conexao , "INSERT INTO usuario(nome, email, cpf, senha) values('$nome', '$email', '$cpf', '$senhaCriptografada')");
 
-    $result = mysqli_query($conexao, "INSERT INTO usuario(nome,email,cpf,senha) values('$nome','$email','$cpf','$senha')");
+        if ($result) {
+            // Cadastro bem-sucedido, definir variável de sessão
+            session_start();
+            $_SESSION['cadastro_sucesso'] = true;
+        }
+        else {
+            // Ocorreu um erro no cadastro, definir variável de sessão
+            session_start();
+            $_SESSION['cadastro_erro'] = true;
+        }
+    
+        //if ($result) {
+        //     echo "Cadastro bem-sucedido!";
+        // } else {
+        //     echo "Ocorreu um erro ao cadastrar. Por favor, tente novamente.";
+        //  }
+    }
 }
 ?>
 
 <!DOCTYPE html>
+<?php
+if (isset($_SESSION['cadastro_sucesso']) && $_SESSION['cadastro_sucesso']) {
+    echo "<script>alert('Cadastro feito com sucesso!');</script>";
+    // Limpar a variável de sessão
+    unset($_SESSION['cadastro_sucesso']);
+}
+if (isset($_SESSION['cadastro_falho']) && $_SESSION['cadastro_falho']) {
+    echo "<script>alert('Cadastro feito com sucesso!');</script>";
+    // Limpar a variável de sessão
+    unset($_SESSION['cadastro_sucesso']);
+}
+if (isset($_SESSION['cadastro_erro']) && $_SESSION['cadastro_erro']) {
+    echo "<script>alert('Ocorreu um erro no cadastro. Tente novamente mais tarde.');</script>";
+    // Limpar a variável de sessão
+    unset($_SESSION['cadastro_erro']);
+}
+?>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -64,7 +97,7 @@ if (isset($_POST['submit']))
                     <!-- <input type="date" class="form-input" >
                     <input type="number" class="form-input" placeholder="Numero de Telefone"> -->
                     <input type="password" class="form-input "id="senha" name="senha" placeholder="Senha" >
-                    <!-- <input type="password" class="form-input " placeholder="Repita sua Senha" > -->
+                    <input type="password" class="form-input " name="rep_senha" placeholder="Repita sua Senha" >
                     <button type="submit" id="submit"name="submit" class="form-button">Cadastrar</button>
                     <p class="mobile-text">já tem conta? 
                         <a href="#" id="open-login-mobile">Login</a>
@@ -88,6 +121,9 @@ if (isset($_POST['submit']))
         </div>
     </main>
 </body>
-<script src="../js/login.js"></script>
+
+<script src="../js/login.js">
+
+</script>
 
 </html>
